@@ -1,4 +1,4 @@
-# LMS
+# Graph Simulator
 Bar Graph Simulator ( C Project ) 
 
 For Windows User.
