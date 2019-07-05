@@ -1,0 +1,23 @@
+#Created by Saroj
+
+SRC = main.c htc.c
+OBJ = $(SRC:%.c=%.o)
+
+target = graphSimulator
+CC = gcc
+Compile.o = $(CC) -c
+
+$(target): $(OBJ)
+	$(CC) $(OBJ) -o $@
+
+main.o: main.c
+	$(Compile.o) main.c
+
+%.o: %.c %.h
+	$(Compile.o) $<
+
+.PHONY: clean
+
+clean:
+	$(RM) main.o htc.o
+
